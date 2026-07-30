@@ -15,15 +15,12 @@ struct gs_empty {};
 
 enum class gs_direction { Directed, Undirected };
 
-template <class node_properties>
-class gs_node;
+template < class node_properties > class gs_node;
 
-template <class edge_properties>
-class gs_edge;
+template < class edge_properties > class gs_edge;
 
-template <class node_properties, class edge_properties, gs_direction dir>
-class gs_graph;
+template < class node_properties, class edge_properties, gs_direction dir > class gs_graph;
 
 } // namespace gs
 
-#endif //GRAPH_SEARCH_FWD_H
+#endif // GRAPH_SEARCH_FWD_H
