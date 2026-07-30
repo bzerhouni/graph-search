@@ -37,13 +37,6 @@ template < class edge_properties = gs_empty > class gs_edge {
     edge_properties m_properties;
 };
 
-// aliases for convenient directed / undirected graphs creation
-template < class node_properties = gs_empty, class edge_properties = gs_empty >
-using gs_digraph = gs_graph< node_properties, edge_properties, gs_direction::Directed >;
-
-template < class node_properties = gs_empty, class edge_properties = gs_empty >
-using gs_ugraph = gs_graph< node_properties, edge_properties, gs_direction::Undirected >;
-
 } // namespace gs
 
 #endif // GRAPH_SEARCH_EDGE_H

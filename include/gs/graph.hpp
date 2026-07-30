@@ -99,6 +99,13 @@ class gs_graph {
     std::vector< Edge > m_edges;
 };
 
+// aliases for convenient directed / undirected graphs creation
+template < class node_properties = gs_empty, class edge_properties = gs_empty >
+using gs_digraph = gs_graph< node_properties, edge_properties, gs_direction::Directed >;
+
+template < class node_properties = gs_empty, class edge_properties = gs_empty >
+using gs_ugraph = gs_graph< node_properties, edge_properties, gs_direction::Undirected >;
+
 } // namespace gs
 
 #endif // GRAPH_SEARCH_GRAPH_H
