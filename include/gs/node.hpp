@@ -1,7 +1,7 @@
 #ifndef GRAPH_SEARCH_NODE_H
 #define GRAPH_SEARCH_NODE_H
-#include "fwd.hpp"
-#include "ids.hpp"
+#include "gs/fwd.hpp"
+#include "gs/ids.hpp"
 #include <span>
 #include <vector>
 

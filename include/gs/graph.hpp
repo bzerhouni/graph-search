@@ -1,7 +1,7 @@
 #ifndef GRAPH_SEARCH_GRAPH_H
 #define GRAPH_SEARCH_GRAPH_H
-#include "ids.hpp"
-#include "fwd.hpp"
+#include "gs/ids.hpp"
+#include "gs/fwd.hpp"
 #include <utility>
 #include <span>
 #include <ranges>

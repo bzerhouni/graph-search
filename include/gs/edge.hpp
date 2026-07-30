@@ -1,7 +1,7 @@
 #ifndef GRAPH_SEARCH_EDGE_H
 #define GRAPH_SEARCH_EDGE_H
-#include "ids.hpp"
-#include "fwd.hpp"
+#include "gs/ids.hpp"
+#include "gs/fwd.hpp"
 #include <utility>
 
 namespace gs {

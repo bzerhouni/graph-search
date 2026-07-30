@@ -1,6 +1,6 @@
 #ifndef GRAPH_SEARCH_MAP_HPP
 #define GRAPH_SEARCH_MAP_HPP
-#include "ids.hpp"
+#include "gs/ids.hpp"
 #include <vector>
 #include <unordered_map>
 
