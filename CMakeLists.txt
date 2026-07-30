@@ -13,17 +13,24 @@ project(
 
 set(CMAKE_CXX_STANDARD 20)
 
-if(DEFINED ENV{BUILD_EXAMPLES})
+if(DEFINED BUILD_EXAMPLES)
+  # respects a -DBUILD_EXAMPLES=... passed on the cmake command line
+elseif(DEFINED ENV{BUILD_EXAMPLES})
   set(BUILD_EXAMPLES "$ENV{BUILD_EXAMPLES}")
 else()
   set(BUILD_EXAMPLES OFF)
 endif()
 
-if(DEFINED ENV{BUILD_TESTS})
+if(DEFINED BUILD_TESTS)
+  # respects a -DBUILD_TESTS=... passed on the cmake command line
+elseif(DEFINED ENV{BUILD_TESTS})
   set(BUILD_TESTS "$ENV{BUILD_TESTS}")
 else()
   set(BUILD_TESTS OFF)
 endif()
+
+message("graph_search - build examples : ${BUILD_EXAMPLES}")
+message("graph_search - build tests : ${BUILD_TESTS}")
 
 # ==================================================================================================
 # Dependencies
