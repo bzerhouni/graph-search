@@ -2,6 +2,8 @@
 #define GRAPH_SEARCH_GRAPH_H
 #include "gs/ids.hpp"
 #include "gs/fwd.hpp"
+#include "gs/node.hpp"
+#include "gs/edge.hpp"
 #include <utility>
 #include <span>
 #include <ranges>
