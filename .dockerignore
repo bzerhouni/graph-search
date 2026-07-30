@@ -1,0 +1,13 @@
+.git
+.idea
+.gitignore
+.clang-format
+.clang-tidy
+.pre-commit-config.yaml
+README.md
+Dockerfile
+.dockerignore
+build/
+Build/
+build-*/
+cmake-build-*/
