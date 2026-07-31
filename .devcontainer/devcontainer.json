@@ -15,5 +15,5 @@
       ]
     }
   },
-  "postCreateCommand": "pre-commit install"
+  "postCreateCommand": "git config --global --add safe.directory /workspace && pre-commit install"
 }
