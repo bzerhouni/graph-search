@@ -58,17 +58,29 @@ FetchContent_MakeAvailable(Boost)
 # Graph search library
 # ==================================================================================================
 
-add_library(graph_search)
-
 file(GLOB_RECURSE GS_HEADERS CONFIGURE_DEPENDS "include/*.hpp")
 file(GLOB_RECURSE GS_SOURCES CONFIGURE_DEPENDS "src/*.cpp")
 
+if(GS_SOURCES)
+  set(GS_LIB_VISIBILITY PUBLIC)
+  add_library(graph_search STATIC)
+  target_sources(graph_search PRIVATE ${GS_SOURCES})
+else()
+  set(GS_LIB_VISIBILITY INTERFACE)
+  add_library(graph_search INTERFACE)
+endif()
+
 target_sources(
   graph_search
-  PUBLIC FILE_SET HEADERS BASE_DIRS "include" FILES ${GS_HEADERS}
-  PRIVATE ${GS_SOURCES})
+  ${GS_LIB_VISIBILITY}
+  FILE_SET
+  HEADERS
+  BASE_DIRS
+  "include"
+  FILES
+  ${GS_HEADERS})
 
-target_link_libraries(graph_search PUBLIC Boost::property_tree)
+target_link_libraries(graph_search ${GS_LIB_VISIBILITY} Boost::property_tree)
 
 # ==================================================================================================
 # Examples
